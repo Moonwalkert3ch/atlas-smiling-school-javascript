@@ -1,0 +1,4 @@
+/* Button hover and active states */
+button:hover, button:active {
+    opacity: 0.9;
+}
