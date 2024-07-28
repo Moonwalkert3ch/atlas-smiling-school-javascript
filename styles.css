@@ -1,6 +1,9 @@
-/* Button hover and active states */
-button:hover, button:active {
-    opacity: 0.9;
+* {
+	font-family: 'Source Sans Pro' !important;
+}
+
+.bg-section {
+	background-color: #071629 !important;
 }
 
 header {
@@ -9,41 +12,66 @@ header {
 	background-size: cover;
 }
 
-.logoHeader {
+header#pricing-page,
+header#courses-page {
+	background-image: url("images/pic_2.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+header#pricing-page h1 {
+	letter-spacing: .1rem;
+}
+
+header#pricing-page svg {
+	fill: #82d24f;
+}
+
+header#pricing-page .logo-words-pricing {
+	width: auto;
+	height: auto;
+	position: relative;
+	top: 5px;
+}
+
+@media (max-width:1200px) {
+	header {
+		background-position: 50% 50%
+	}
+
+	.pros img {
+		width: 75% !important;
+		height: auto
+	}
+}
+
+.logo-smile {
 	width: auto;
 	height: 30px;
-
 }
 
-* {
-	font-family: 'Source Sans Pro' !important;
-
-}
-
-@media (max-width: 1200px) {
-	header {
-		background-position: 50% 50%;
-	}
-
-	.users img {
-		width: 75% !important;
-		height: auto;
-	}
+.logo-words {
+	width: auto;
+	height: 30px;
 }
 
 .nav-item {
 	font-size: 12px !important;
 }
 
-header a:hover {
-	text-decoration: none;
-	border-bottom: 1px solid white;
-	color: #c371ff !important;
+.hero-title {
+	letter-spacing: .2rem;
+	white-space: pre;
+}
+
+.hero-content {
+	margin-top: 6rem;
 }
 
 .btn {
 	background-color: #c271ff !important;
 	border-color: #c271ff !important;
+	transition: opacity .25s ease;
 	font-size: 14px;
 }
 
@@ -51,22 +79,22 @@ header a:hover {
 .btn:active {
 	background-color: #c271ff !important;
 	border-color: #c271ff !important;
-	opacity: 0.9;
+	opacity: .9;
 }
 
-.users-section {
+.pros-section {
 	margin-top: 8rem;
 }
 
-.text-violet {
+.learn {
 	color: #c271ff;
 }
 
-.users {
+.pros {
 	margin: 5rem 0;
 }
 
-.users img {
+.pros img {
 	width: 75% !important;
 	height: auto;
 }
@@ -86,7 +114,7 @@ header a:hover {
 	height: 2px;
 	background-color: white;
 	position: relative;
-	top: -0.5rem;
+	top: -.5rem;
 }
 
 #nav-menu-btn::after {
@@ -96,100 +124,239 @@ header a:hover {
 	height: 2px;
 	background-color: white;
 	position: relative;
-	top: 0.4rem;
+	top: .4rem;
 }
 
-@media (max-width: 576px) {
+@media (max-width:576px) {
 	header {
-		background-position: 45% 50%;
+		background-position: 45% 50%
 	}
 
-	.hamburgerMenu {
-		max-height: 0px;
+	.header-nav {
+		max-height: 0;
 		overflow: hidden;
-		transition: max-height 0.5s ease-in-out;
+		transition: max-height .5s ease-in-out
 	}
 
-	#nav-toggle:checked~.hamburgerMenu {
+	#nav-toggle:checked~.header-nav {
 		max-height: 100vh;
-		overflow: hidden;
+		overflow: hidden
 	}
 
 	.display-1 {
-		font-size: 4rem;
+		font-size: 4rem
 	}
 
-	.users .h5 {
-		font-size: 1.1rem;
+	.hero-title {
+		letter-spacing: .1rem
+	}
+
+	.pros .h5 {
+		font-size: 1.1rem
 	}
 }
 
-.bg-violet {
-	background-color: #c271ff !important;
+@media (max-width:768px) {
+	.pros p {
+		font-size: .9rem
+	}
 }
 
-.video-card {
-	width: 250px;
+.quotes {
+	background-color: #c271ff;
 }
 
-img.circle-thumb {
-	width: 150px;
-	height: 150px;
-
+#quotes-carousel .carousel-item {
+	width: 100%;
+	height: 300px;
+	background-color: #c271ff;
 }
 
-img.logo {
-	height: 30px;
+#quotes-carousel .carousel-item img {
+	width: 20%;
+	margin-left: 15%;
 }
 
-img.star {
-	height: 15px;
-	width: 15px;
+#quotes-carousel .carousel-item .quote-text {
+	margin-left: 2rem;
+	width: 50%;
 }
 
-img.circle-thumb-small {
-	width: 50px;
-	height: 50px;
+.video-duration {
+	font-size: 14px;
 }
 
-#search-button {
-	text-decoration: none;
+.card {
+	border-color: transparent !important;
 }
 
-.bg-sectionfree {
-	background-color: #071629;
+@media (max-width:768px) {
+
+	#popular-carousel .carousel-inner .carousel-item>div,
+	#latest-carousel .carousel-inner .carousel-item>div {
+		display: none
+	}
+
+	#popular-carousel .carousel-inner .carousel-item>div:first-child,
+	#latest-carousel .carousel-inner .carousel-item>div:first-child {
+		display: block
+	}
 }
 
-.social>svg {
+#popular-carousel .carousel-inner .carousel-item.active,
+#popular-carousel .carousel-inner .carousel-item-next,
+#popular-carousel .carousel-inner .carousel-item-prev,
+#latest-carousel .carousel-inner .carousel-item.active,
+#latest-carousel .carousel-inner .carousel-item-next,
+#latest-carousel .carousel-inner .carousel-item-prev {
+	display: flex;
+}
+
+@media (min-width:768px) {
+
+	#popular-carousel .carousel-inner .carousel-item-right.active,
+	#popular-carousel .carousel-inner .carousel-item-next,
+	#latest-carousel .carousel-inner .carousel-item-right.active,
+	#latest-carousel .carousel-inner .carousel-item-next {
+		transform: translateX(25%)
+	}
+
+	#popular-carousel .carousel-inner .carousel-item-left.active,
+	#popular-carousel .carousel-inner .carousel-item-prev,
+	#latest-carousel .carousel-inner .carousel-item-left.active,
+	#latest-carousel .carousel-inner .carousel-item-prev {
+		transform: translateX(-25%)
+	}
+}
+
+#popular-carousel .carousel-inner .carousel-item-right,
+#popular-carousel .carousel-inner .carousel-item-left,
+#latest-carousel .carousel-inner .carousel-item-right,
+#latest-carousel .carousel-inner .carousel-item-left {
+	transform: translateX(0);
+}
+
+.video {
+	position: relative;
+}
+
+.play-btn {
+	width: 20%;
+	height: auto;
+	position: absolute;
+	left: 40%;
+	top: 36%;
+}
+
+.tutorial-author img {
+	width: 15%;
+}
+
+.tutorial-author span,
+.tutorial-info span {
+	color: #c271ff;
+}
+
+.tutorial-info .rating img {
+	width: 10%;
+}
+
+.membership-section img {
+	width: 80px;
+}
+
+.social-nav {
+	max-width: 40%;
+}
+
+.social {
+	margin: .5rem;
+	fill: white !important;
+}
+
+.font-coiny {
+	font-family: "Coiny" !important;
+}
+
+.bg-purple {
+	background-color: #c271ff;
+}
+
+#keywords {
+	border-left: none;
+}
+
+#search-filters svg {
 	fill: white;
 }
 
-.pricing {
-	background-image: url(images/pic_2.jpg) !important;
-	background-repeat: no-repeat;
-	background-size: cover;
-
+input,
+.input-group,
+.input-group-text,
+select {
+	border-radius: 0 !important;
+	border-top: none !important;
+	border-right: none !important;
+	border-left: none !important;
+	border-color: white !important;
+	background-color: rgb(255, 255, 255, .2) !important;
+	color: #efefef !important;
 }
 
-.courses {
-	background-image: url(images/pic_3.jpg) !important;
-	background-repeat: no-repeat;
-	background-size: cover;
-
+.input-group-text {
+	position: relative;
+	right: 1px;
 }
 
-.courseText {
-	font-size: 32px;
-	font-family: 'Coiny' !important;
-	font-weight: 400;
+input::placeholder {
+	color: #efefef !important;
 }
 
-.search-icon {
-	font-family: 'holberton_school-icon';
-	font-size: 15px;
+select option {
+	color: black;
+	margin-top: 1rem;
 }
 
-.searchbar {
-	background-color: #d195ff;
-	border-radius: 3px;
+#popular-carousel .carousel-control-prev,
+#latest-carousel .carousel-control-prev {
+	position: absolute;
+	left: -2rem;
+}
+
+#popular-carousel .carousel-control-next,
+#latest-carousel .carousel-control-next {
+	position: absolute;
+	right: -2rem;
+}
+
+.loader-wrapper {
+	padding: 3rem;
+}
+
+.loader {
+	border-radius: 50%;
+	width: 80px;
+	height: 80px;
+	animation: spin 2s linear infinite;
+	margin: auto;
+}
+
+.loader-bg-purple {
+	border: 10px solid #f3f3f3;
+	border-top: 10px solid #C271FF
+}
+
+.loader-bg-white {
+	border: 10px solid #c271ff;
+	border-top: 10px solid #f3f2f3;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg)
+	}
+
+	100% {
+		transform: rotate(360deg)
+	}
 }
