@@ -329,34 +329,17 @@ select option {
 	right: -2rem;
 }
 
-.loader-wrapper {
-	padding: 3rem;
-}
-
 .loader {
-	border-radius: 50%;
-	width: 80px;
-	height: 80px;
-	animation: spin 2s linear infinite;
-	margin: auto;
-}
-
-.loader-bg-purple {
-	border: 10px solid #f3f3f3;
-	border-top: 10px solid #C271FF
-}
-
-.loader-bg-white {
-	border: 10px solid #c271ff;
-	border-top: 10px solid #f3f2f3;
+    border: 10px solid #f3f3f3;
+    border-top: 10px solid #C271FF;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    animation: spin 2s linear infinite;
+    margin: auto;
 }
 
 @keyframes spin {
-	0% {
-		transform: rotate(0deg)
-	}
-
-	100% {
-		transform: rotate(360deg)
-	}
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
